@@ -5,3 +5,11 @@
  */
 
 include_once 'ogmk_faqs.features.inc';
+
+/**
+ * @Issue(
+ *   "Implement functionality for per-shop FAQs"
+ *   type="feature"
+ *   priority="normal"
+ * )
+ */
