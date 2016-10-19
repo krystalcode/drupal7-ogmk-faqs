@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Commerce Marketplace FAQs feature.
+ */
+
+include_once 'ogmk_faqs.features.inc';
