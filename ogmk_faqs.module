@@ -22,7 +22,7 @@ include_once 'ogmk_faqs.features.inc';
  * and administrators.
  */
 function ogmk_faqs_node_view($node, $view_mode, $langcode) {
-  if ($node->type !== 'ogmk_faq' && $view_mode !== 'full') {
+  if ($node->type !== 'ogmk_faq' || $view_mode !== 'full') {
     return;
   }
 
