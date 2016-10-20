@@ -13,3 +13,25 @@ include_once 'ogmk_faqs.features.inc';
  *   priority="normal"
  * )
  */
+
+/**
+ * Implements hook_node_view().
+ *
+ * We don't need the individual FAQ page since all FAQs are displayed in one
+ * view page. Prevent access to individual FAQs pages, except for the superuser
+ * and administrators.
+ */
+function ogmk_faqs_node_view($node, $view_mode, $langcode) {
+  if ($node->type !== 'ogmk_faq' && $view_mode !== 'full') {
+    return;
+  }
+
+  global $user;
+
+  if ((int) $user->uid === 1 || in_array('administrator', array($user->roles))) {
+    return;
+  }
+
+  drupal_not_found();
+  drupal_exit();
+}
