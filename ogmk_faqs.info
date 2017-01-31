@@ -6,6 +6,7 @@ version = 7.x-0.1-dev
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = node
+dependencies[] = number
 dependencies[] = ogmk_base
 dependencies[] = publication_date
 dependencies[] = strongarm
